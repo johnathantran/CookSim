@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/JTfav.ico" type="image/x-icon">
+	<title>CookSim</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<!-- CUSTOM JAVASCRIPT -->
+	<script src="home.js" async></script>
+
+	<link href="home2.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#"><img src=""
+		style=width:300px></a>
+
+	<!-- Makes the navigation menu -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<!-- Pushes the navbar to the RH side at full width -->
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="">Resources</a>
+			</li>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="">Connect</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="">Account</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<div class="header">
+<br><h1> CookSim </h1><br>
+<p>CookSim is a cooking simulator that teaches you how to cook in real life. How exactly does that work?
+	It’s actually pretty simple. In CookSim, you work as a professional chef in Central City and cook for many different restaurants.
+	Your job is to serve virtual customers by making the requested dish in real life and uploading a photo of your cooking to our site.
+	Over time, you will learn to cook different kinds of cuisine by fulfilling orders for restaurants all around Central City. Our system
+	is intuitive and rewarding. We introduce you to culturally diverse foods, keep track of your personal culinary milestones, and reward
+	you for your achievements as a growing cook. You receive credits for completing orders that you can use to be promoted. Of course, more advanced positions at
+	your restaurants will require you to cook more complex dishes. So what are you waiting for? Get cooking with CookSim.</p>
+	<hr>
+	<h4> Getting Started </h4><br>
+	<p style="text-align:center"> Select a restaurant in the city by clicking on the city map. Once you've selected a location, pick one of the dishes to cook, snap a photo, and
+	upload the image. Once your image has been processed, we'll serve it to the customer and you give you credits. You can use your credits to unlock job promotions so you can learn to cook more complex meals.
+</p><hr></div>
+<div class="row container-fluid padding" id="mainContainer">
+	<div class="row col-lg-5 col-md-5" id="map">
+		<div class="col-12"><h4> Central City Map </h4>
+		<p> Welcome to Central City! This city is a huge cultural melting pot and the perfect place for you to get started on your culinary journey. Click on any of the city districts to begin. </p>
+		<em class="note">Note: Each of your restaurants in Central City is
+		culturally unique, and you'll have to cater to a different crowd in each one.</em>
+		</div>
+
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup1()"><img src="img/blocks/chinatown.png" class="city img-fluid" id="chinatown">
+			<span class="popuptext" id="myPopup1"><strong>Chinatown</strong><br><em>Asian Cuisine</em></span></div>
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup2()"><img src="img/blocks/grandHotel.png" class="city img-fluid" id="grandHotel">
+			<span class="popuptext" id="myPopup2"><strong>The Grand Hotel</strong><br><em>Breakfast Food</em></span></div>
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup3()"><img src="img/blocks/uptown.png" class="city img-fluid" id="uptown">
+			<span class="popuptext" id="myPopup3"><strong>Uptown</strong><br><em>Baked Goods</em></span></div>
+
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup4()"><img src="img/blocks/portside.png" class="city img-fluid" id="portside">
+			<span class="popuptext" id="myPopup4"><strong>Portside</strong><br><em>Seafood</em></span></div>
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup5()"><img src="img/blocks/orleansSquare.png" class="city img-fluid" id="orleansSquare">
+			<span class="popuptext" id="myPopup5"><strong>Orleans Square</strong><br><em>Cajun Cuisine</em></span></div>
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup6()"><img src="img/blocks/marketSquare.png" class="city img-fluid" id="marketSquare">
+			<span class="popuptext" id="myPopup6"><strong>Market Square</strong><br><em>Mexican Cuisine</em></span></div>
+
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup7()"><img src="img/blocks/southHarbor.png" class="city img-fluid" id="southHarbor">
+			<span class="popuptext" id="myPopup7"><strong>South Harbor</strong><br><em>Mediterranean Cuisine</em></span></div>
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup8()"><img src="img/blocks/sunDistrict.png" class="city img-fluid" id="sunDistrict">
+			<span class="popuptext" id="myPopup8"><strong>Sun District</strong><br><em>Indian Cuisine</em></span></div>
+		<div class="col-lg-4 col-md-6 col-sm-6 nopadding popup" onclick="openPopup9()"><img src="img/blocks/littleItaly.png" class="city img-fluid" id="littleItaly">
+			<span class="popuptext" id="myPopup9"><strong>Little Italy</strong><br><em>Italian Cuisine</em></span></div>
+
+	</div>
+
+
+
+
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="cardWelcome"><br><h5> Pick a city district on the map to view your restaurant's information.</h5></div>
+	<div class="padding col-lg-3 col-md-3" id="card1" style="display:none;">
+		<h4> Chinatown </h4>
+		<h6> Job: Line Cook </h6><hr>
+			<p> In Central City, Chinatown is a melting pot of many different Asian cultures. All types of delicious Asian cuisine from Chinese fried rice to Japanese sushi
+				can be found here. Working as a line cook in Chinatown is hard work, but you're determined you can climb the ranks if you prove yourself by
+				cooking some of the dishes below. </p>
+			<p> Promotion to Sous Chef: 10 credits needed, and cook at least 2/3 of the dishes below. </p>
+			<input type="button" value="Get Promoted!" name="submit"><br><hr>
+		<h5> Needed Dishes: </h5>
+		<table>
+			<tr>
+				<td><figure><img src="img/applePie-01.png" class="icon img-fluid"><figcaption>Apple Pie</figcaption></figure></td>
+				<td><figure><img src="img/cake-02.png" class="icon img-fluid"><figcaption>Cake</figcaption></figure></td>
+				<td><figure><img src="img/applePie-01.png" class="icon img-fluid"><figcaption>Apple Pie</figcaption></figure></td>
+			</tr>
+		</table><hr>
+		<table>
+			<tr>
+				<td><form method="post" action="">
+					<select>
+					<option value="applePie">Chicken Stir Fry</option>
+					<option value="cake">Fried Rice</option>
+					<option value="bagel">Sushi</option>
+					</form></td>
+					<td><form action="/action_page.php">
+					<input type="file" name="pic" accept="image/*">
+					<input type="submit">
+					</form></td></tr>
+		</table>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card2" style="display:none;">
+		<h4> The Grand Hotel </h4>
+		<em> Breakfast Food </em>
+		<h6> Job: Line Cook </h6><hr>
+			<p> The Grand Hotel provides continental breakfast every morning for its guests. As such, working
+				in The Grand Hotel means learning to cook warm, hearty breakfast food. </p>
+			<p> Promotion to Sous Chef: 10 credits needed, and cook at least 2/3 of the dishes below. </p>
+			<input type="button" value="Get Promoted!" name="submit"><br><hr>
+		<h5> Needed Dishes: </h5>
+		<table>
+			<tr>
+				<td><figure><img src="img/applePie-01.png" class="icon img-fluid"><figcaption>Apple Pie<br><p class="note">3 credits</p></figcaption></figure></td>
+				<td><figure><img src="img/cake-02.png" class="icon img-fluid"><figcaption>Cake<br><p class="note">6 credits</p></figcaption></figure></td>
+				<td><figure><img src="img/applePie-01.png" class="icon img-fluid"><figcaption>Apple Pie<br><p class="note">3 credits</p></figcaption></figure></td>
+			</tr>
+		</table><hr>
+		<table>
+			<tr>
+				<td><form method="post" action="">
+					<select>
+					<option value="applePie">Chicken Stir Fry</option>
+					<option value="cake">Fried Rice</option>
+					<option value="bagel">Sushi</option>
+					</form></td>
+					<td><form action="/action_page.php">
+					<input type="file" name="pic" accept="image/*">
+					<input type="submit">
+					</form></td></tr>
+		</table>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card3" style="display:none;">
+		<h4> Uptown </h4>
+		<em> Baked Goods </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card4" style="display:none;">
+		<h4> Portside </h4>
+		<em> Seafood </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card5" style="display:none;">
+		<h4> Orleans Square </h4>
+		<em> Cajun Cuisine </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card6" style="display:none;">
+		<h4> Orleans Square </h4>
+		<em> Cajun Cuisine </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card7" style="display:none;">
+		<h4> Market Square </h4>
+		<em> Mexican Cuisine </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card8" style="display:none;">
+		<h4> South Harbor </h4>
+		<em> Mediterranean Cuisine </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card9" style="display:none;">
+		<h4> Sun District </h4>
+		<em> Indian Cuisine </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+	<!-- BEGINNING CARD -->
+	<div class="padding col-lg-3 col-md-3" id="card3" style="display:none;">
+		<h4> Little Italy </h4>
+		<em> Italian Cuisine </em>
+		<h6> Job: Line Cook </h6><hr>
+		<p> To be updated </p>
+	</div>
+	<!-- END CARD -->
+
+
+
+
+
+
+
+
+	<div class="row padding col-lg-3 col-md-3" id="menu">
+		<div class="col-12">
+		<h4> Your Profile </h4>
+		<em class="note"> An overview of all your jobs around Central City and your achievements. </em></div>
+
+		<table>
+			<tr>
+				<td> Credits: </td>
+				<td><input id="numCredits" type="number" name="numCredits" value="" readonly /></td>
+			</tr>
+			<tr>
+				<td> Total Meals Cooked: </td>
+				<td><input id="totalMealsCooked" type="number" name="totalMealsCooked" value="" readonly /></td>
+			</tr>
+		</table>
+
+		<div class="col-12">
+			<table id="jobListings">
+				<form id="creditsAndMeals">
+				<tr>
+					<th> Job Location </th>
+					<th> Food Type </th>
+					<th> Job Position </th>
+					<th> # Meals Cooked: </th>
+				</tr>
+				<tr>
+					<td> Chinatown </td>
+					<td> Asian </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMeals" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> The Grand Hotel </td>
+					<td> Breakfast </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> Uptown </td>
+					<td> Baked Goods </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> Portside </td>
+					<td> Seafood </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> Orleans Square </td>
+					<td> Cajun </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> Market Square </td>
+					<td> Mexican </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> South Harbor </td>
+					<td> Mediterranean </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> Sun District </td>
+					<td> Indian </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+				<tr>
+					<td> Little Italy </td>
+					<td> Italian </td>
+					<td> <input class="jobPosition" type="text" name="chinatownPosition" value="Line Cook" readonly /></td>
+					<td> <input class="numMeals" type="number" name="chinatownMealst" value="0" readonly /></td>
+				</tr>
+			</form>
+			</table><hr>
+
+			<h6> Achievements </h6>
+			<table id="achievements"> <!-- Breakfast food -->
+				<tr>
+					<td><figure><img src="img/applePie-01.png" class="img-fluid"><figcaption class="fig2">Apple Pie</figcaption></figure></td>
+					<td><figure><img src="img/cake-02.png" class="img-fluid"><figcaption class="fig2">Cake</figcaption></figure></td>
+					<td><figure><img src="img/applePie-01.png" class="img-fluid"><figcaption class="fig2">Apple Pie</figcaption></figure></td>
+					<td><figure><img src="img/applePie-01.png" class="img-fluid"><figcaption class="fig2">Apple Pie</figcaption></figure></td>
+					<td><figure><img src="img/cake-02.png" class="img-fluid"><figcaption class="fig2">Cake</figcaption></figure></td>
+					<td><figure><img src="img/applePie-01.png" class="img-fluid"><figcaption class="fig2">Apple Pie</figcaption></figure></td>
+				</tr>
+				<tr>
+					<td><figure><img src="img/locked.png" class="img-fluid"><figcaption class="fig2">Locked</figcaption></figure></td>
+					<td><figure><img src="img/locked.png" class="img-fluid"><figcaption class="fig2">Locked</figcaption></figure></td>
+					<td><figure><img src="img/locked.png" class="img-fluid"><figcaption class="fig2">Locked</figcaption></figure></td>
+					<td><figure><img src="img/locked.png" class="img-fluid"><figcaption class="fig2">Locked</figcaption></figure></td>
+					<td><figure><img src="img/locked.png" class="img-fluid"><figcaption class="fig2">Locked</figcaption></figure></td>
+					<td><figure><img src="img/locked.png" class="img-fluid"><figcaption class="fig2">Locked</figcaption></figure></td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+
+</body>
+</html>
